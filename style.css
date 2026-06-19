@@ -340,6 +340,13 @@ body {
     color: var(--text-bright);
 }
 
+.link-icon.se::after { content: 'SE'; }
+.link-item:hover .link-icon.se {
+    border-color: var(--text);
+    color: var(--text-bright);
+}
+
+
 /* ── Link name ── */
 .link-name {
     flex: 1;
