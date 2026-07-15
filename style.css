@@ -25,16 +25,34 @@
             'Codelia', 'Iosevka', Consolas, 'Liberation Mono', monospace;
     --radius: 8px;
 
-    /* code syntax tokens (VSCode Dark+) */
-    --code-fg:    #423939;
-    --code-kw:    #569cd6;
-    --code-type:  #4ec9b0;
-    --code-func:  #dcdcaa;
-    --code-var:   #9cdcfe;
-    --code-str:   #ce9178;
-    --code-num:   #b5cea8;
-    --code-com:   #6a9955;
-    --code-pp:    #c586c0;
+    --code-fg:       #d4d4d4;
+    --code-kw:       #569cd6;
+    --code-ctrl:     #c586c0;
+    --code-type:     #4ec9b0;
+    --code-enum:     #4ec9b0;
+    --code-func:     #dcdcaa;
+    --code-macro:    #dcdcaa;
+    --code-var:      #9cdcfe;
+    --code-param:    #9cdcfe;
+    --code-prop:     #9cdcfe;
+    --code-const:    #4fc1ff;
+    --code-str:      #ce9178;
+    --code-char:     #ce9178;
+    --code-esc:      #d7ba7d;
+    --code-num:      #b5cea8;
+    --code-com:      #6a9955;
+    --code-doc:      #608b4e;
+    --code-pp:       #c586c0;
+    --code-attr:     #9cdcfe;
+    --code-lifetime: #569cd6;
+    --code-op:       #d4d4d4;
+    --code-punct:    #808080;
+    --code-self:     #569cd6;
+    --code-mod:      #4ec9b0;
+    --code-label:    #c8c8c8;
+    --code-unsafe:   #f44747;
+    --code-err:      #f44747;
+    --code-warn:     #cca700;
 }
 
 html {
@@ -149,14 +167,34 @@ body {
 
 .code-line { white-space: pre; }
 
-.tok-pp   { color: var(--code-pp); }
-.tok-str  { color: var(--code-str); }
-.tok-kw   { color: var(--code-kw); }
-.tok-type { color: var(--code-type); }
-.tok-func { color: var(--code-func); }
-.tok-var  { color: var(--code-var); }
-.tok-num  { color: var(--code-num); }
-.tok-com  { color: var(--code-com); }
+/* ── Syntax token classes ── */
+.tok-kw       { color: var(--code-kw); }
+.tok-ctrl     { color: var(--code-ctrl); }
+.tok-type     { color: var(--code-type); }
+.tok-enum     { color: var(--code-enum); }
+.tok-func     { color: var(--code-func); }
+.tok-macro    { color: var(--code-macro); }
+.tok-var      { color: var(--code-var); }
+.tok-param    { color: var(--code-param); font-style: italic; }
+.tok-prop     { color: var(--code-prop); }
+.tok-const    { color: var(--code-const); }
+.tok-str      { color: var(--code-str); }
+.tok-char     { color: var(--code-char); }
+.tok-esc      { color: var(--code-esc); }
+.tok-num      { color: var(--code-num); }
+.tok-com      { color: var(--code-com); font-style: italic; }
+.tok-doc      { color: var(--code-doc); font-style: italic; }
+.tok-pp       { color: var(--code-pp); }
+.tok-attr     { color: var(--code-attr); }
+.tok-lifetime { color: var(--code-lifetime); font-style: italic; }
+.tok-op       { color: var(--code-op); }
+.tok-punct    { color: var(--code-punct); }
+.tok-self     { color: var(--code-self); font-style: italic; }
+.tok-mod      { color: var(--code-mod); }
+.tok-label    { color: var(--code-label); }
+.tok-unsafe   { color: var(--code-unsafe); font-weight: 600; }
+.tok-err      { color: var(--code-err); }
+.tok-warn     { color: var(--code-warn); }
 
 /* ── Program output ── */
 .program-output {

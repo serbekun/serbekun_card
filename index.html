@@ -27,9 +27,11 @@
                 <span class="code-window-name">welcome.rs</span>
             </div>
 <div class="code-window-body">
-<div class="code-line"><span class="tok-kw">fn</span> <span class="tok-func">main</span>() {</div>
-<div class="code-line">    <span class="tok-func">println</span><span class="tok-kw">!</span><span class="tok-pp">(</span><span class="tok-str">"Welcome"</span><span class="tok-pp">)</span>;</div>
-<div class="code-line">}</div>
+<div class="code-line"><span class="tok-doc">/// entry point of serbekun.com</span></div>
+<div class="code-line"><span class="tok-kw">fn</span> <span class="tok-func">main</span><span class="tok-punct">()</span> <span class="tok-punct">{</span></div>
+<div class="code-line">    <span class="tok-kw">let</span> <span class="tok-var">visitor</span> <span class="tok-op">=</span> <span class="tok-str">"you"</span><span class="tok-punct">;</span></div>
+<div class="code-line">    <span class="tok-macro">println!</span><span class="tok-punct">(</span><span class="tok-str">"Welcome, </span><span class="tok-esc">{}</span><span class="tok-str">!"</span><span class="tok-punct">,</span> <span class="tok-var">visitor</span><span class="tok-punct">);</span> <span class="tok-com">// greet</span></div>
+<div class="code-line"><span class="tok-punct">}</span></div>
             </div>
         </div>
 
@@ -43,7 +45,7 @@
             <span class="prompt-cmd">rustc welcome.rs -o welcome &amp;&amp; ./welcome</span>
         </div>
 
-        <div class="program-output">Welcome</div>
+        <div class="program-output">Welcome, you!</div>
 
         <!-- prompt -->
         <div class="prompt-line">
