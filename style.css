@@ -350,6 +350,14 @@ body {
     color: var(--text-bright);
 }
 
+
+/* GitHub */
+.link-icon.hf::after { content: 'HF'; }
+.link-item:hover .link-icon.hf {
+    border-color: var(--text);
+    color: var(--text-bright);
+}
+
 /* Instagram */
 .link-icon.ig::after { content: 'IG'; }
 .link-item:hover .link-icon.ig {
