@@ -53,6 +53,105 @@
     --code-unsafe:   #f44747;
     --code-err:      #f44747;
     --code-warn:     #cca700;
+
+    color-scheme: dark;
+}
+
+/* ── Light theme ──
+   Palette is applied in two ways:
+   1. automatically, when the system prefers light and the user
+      has not picked a theme on the site (no data-theme attribute);
+   2. explicitly, via data-theme="light" set by theme.js.
+   The variable block is intentionally duplicated — CSS has no way
+   to share a ruleset between a media query and a selector. */
+:root[data-theme="light"] {
+    --bg:     #e8e8e6;
+    --bg2:    #f6f6f4;
+    --bg3:    #ffffff;
+    --border: #d4d4d0;
+    --border-hover: #a8a8a4;
+    --text:   #333;
+    --text-dim:  #888;
+    --text-dimmer: #b8b8b4;
+    --text-bright: #000;
+    --accent: #666;
+
+    --code-fg:       #383838;
+    --code-kw:       #0000ff;
+    --code-ctrl:     #af00db;
+    --code-type:     #267f99;
+    --code-enum:     #267f99;
+    --code-func:     #795e26;
+    --code-macro:    #795e26;
+    --code-var:      #001080;
+    --code-param:    #001080;
+    --code-prop:     #001080;
+    --code-const:    #0070c1;
+    --code-str:      #a31515;
+    --code-char:     #a31515;
+    --code-esc:      #ee0000;
+    --code-num:      #098658;
+    --code-com:      #008000;
+    --code-doc:      #237893;
+    --code-pp:       #af00db;
+    --code-attr:     #001080;
+    --code-lifetime: #0000ff;
+    --code-op:       #383838;
+    --code-punct:    #666;
+    --code-self:     #0000ff;
+    --code-mod:      #267f99;
+    --code-label:    #333;
+    --code-unsafe:   #cd3131;
+    --code-err:      #cd3131;
+    --code-warn:     #bf8803;
+
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+        --bg:     #e8e8e6;
+        --bg2:    #f6f6f4;
+        --bg3:    #ffffff;
+        --border: #d4d4d0;
+        --border-hover: #a8a8a4;
+        --text:   #333;
+        --text-dim:  #888;
+        --text-dimmer: #b8b8b4;
+        --text-bright: #000;
+        --accent: #666;
+
+        --code-fg:       #383838;
+        --code-kw:       #0000ff;
+        --code-ctrl:     #af00db;
+        --code-type:     #267f99;
+        --code-enum:     #267f99;
+        --code-func:     #795e26;
+        --code-macro:    #795e26;
+        --code-var:      #001080;
+        --code-param:    #001080;
+        --code-prop:     #001080;
+        --code-const:    #0070c1;
+        --code-str:      #a31515;
+        --code-char:     #a31515;
+        --code-esc:      #ee0000;
+        --code-num:      #098658;
+        --code-com:      #008000;
+        --code-doc:      #237893;
+        --code-pp:       #af00db;
+        --code-attr:     #001080;
+        --code-lifetime: #0000ff;
+        --code-op:       #383838;
+        --code-punct:    #666;
+        --code-self:     #0000ff;
+        --code-mod:      #267f99;
+        --code-label:    #333;
+        --code-unsafe:   #cd3131;
+        --code-err:      #cd3131;
+        --code-warn:     #bf8803;
+
+        color-scheme: light;
+    }
 }
 
 html {
@@ -111,6 +210,50 @@ body {
 @keyframes typePulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.6; }
+}
+
+/* ── Theme toggle ── */
+.theme-toggle {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 10;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-dim);
+    font-family: var(--font);
+    font-size: 0.9rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.theme-toggle:hover {
+    background: var(--bg3);
+    border-color: var(--border-hover);
+    color: var(--text-bright);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* icon: sun in dark theme (click -> light), moon in light theme */
+.theme-toggle .tt-moon { display: none; }
+
+:root[data-theme="light"] .theme-toggle .tt-sun  { display: none; }
+:root[data-theme="light"] .theme-toggle .tt-moon { display: inline; }
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .tt-sun  { display: none; }
+    :root:not([data-theme="dark"]) .theme-toggle .tt-moon { display: inline; }
 }
 
 /* ── Terminal window ── */
