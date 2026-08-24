@@ -494,7 +494,7 @@ body {
 }
 
 
-/* GitHub */
+/* Hugging Face */
 .link-icon.hf::after { content: 'HF'; }
 .link-item:hover .link-icon.hf {
     border-color: var(--text);
@@ -528,6 +528,14 @@ body {
     border-color: var(--text);
     color: var(--text-bright);
 }
+
+/* Bunkasai Server */
+.link-icon.bunkasai::after { content: '茎'; }
+.link-item:hover .link-icon.bunkasai {
+    border-color: var(--text);
+    color: var(--text-bright);
+}
+
 
 .link-icon.se::after { content: 'SE'; }
 .link-item:hover .link-icon.se {
