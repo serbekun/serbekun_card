@@ -27,19 +27,21 @@
             <span class="prompt-host">serbekun.com</span>
             <span class="prompt-path">~</span>
             <span class="prompt-dol">$</span>
-            <span class="prompt-cmd">cat welcome.rs</span>
+            <span class="prompt-cmd">cat Welcome.java</span>
         </div>
 
         <div class="code-window">
             <div class="code-window-bar">
                 <div class="code-window-dots"><span></span><span></span><span></span></div>
-                <span class="code-window-name">welcome.rs</span>
+                <span class="code-window-name">Welcome.java</span>
             </div>
 <div class="code-window-body">
-<div class="code-line"><span class="tok-doc">/// entry point of serbekun.com</span></div>
-<div class="code-line"><span class="tok-kw">fn</span> <span class="tok-func">main</span><span class="tok-punct">()</span> <span class="tok-punct">{</span></div>
-<div class="code-line">    <span class="tok-kw">let</span> <span class="tok-var">visitor</span> <span class="tok-op">=</span> <span class="tok-str">"you"</span><span class="tok-punct">;</span></div>
-<div class="code-line">    <span class="tok-macro">println!</span><span class="tok-punct">(</span><span class="tok-str">"Welcome, </span><span class="tok-esc">{}</span><span class="tok-str">!"</span><span class="tok-punct">,</span> <span class="tok-var">visitor</span><span class="tok-punct">);</span> <span class="tok-com">// greet</span></div>
+<div class="code-line"><span class="tok-doc">/** entry point of serbekun.com */</span></div>
+<div class="code-line"><span class="tok-kw">public</span> <span class="tok-kw">class</span> <span class="tok-func">Welcome</span> <span class="tok-punct">{</span></div>
+<div class="code-line">    <span class="tok-kw">public</span> <span class="tok-kw">static</span> <span class="tok-kw">void</span> <span class="tok-func">main</span><span class="tok-punct">(</span><span class="tok-type">String</span><span class="tok-punct">[]</span> <span class="tok-var">args</span><span class="tok-punct">)</span> <span class="tok-punct">{</span></div>
+<div class="code-line">        <span class="tok-type">String</span> <span class="tok-var">visitor</span> <span class="tok-op">=</span> <span class="tok-str">"you"</span><span class="tok-punct">;</span></div>
+<div class="code-line">        <span class="tok-type">System</span><span class="tok-punct">.</span><span class="tok-prop">out</span><span class="tok-punct">.</span><span class="tok-func">printf</span><span class="tok-punct">(</span><span class="tok-str">"Welcome, </span><span class="tok-esc">%s</span><span class="tok-str">!%n"</span><span class="tok-punct">,</span> <span class="tok-var">visitor</span><span class="tok-punct">);</span> <span class="tok-com">// greet</span></div>
+<div class="code-line">    <span class="tok-punct">}</span></div>
 <div class="code-line"><span class="tok-punct">}</span></div>
             </div>
         </div>
@@ -51,7 +53,7 @@
             <span class="prompt-host">serbekun.com</span>
             <span class="prompt-path">~</span>
             <span class="prompt-dol">$</span>
-            <span class="prompt-cmd">rustc welcome.rs -o welcome &amp;&amp; ./welcome</span>
+            <span class="prompt-cmd">javac Welcome.java &amp;&amp; java Welcome</span>
         </div>
 
         <div class="program-output">Welcome, you!</div>
