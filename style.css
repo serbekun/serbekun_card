@@ -534,6 +534,13 @@ body {
     color: var(--text-bright);
 }
 
+/* CCAiM */
+.link-icon.ccaim::after { content: 'CC'; }
+.link-item:hover .link-icon.ccaim {
+    border-color: var(--text);
+    color: var(--text-bright);
+}
+
 /* Bunkasai Server */
 .link-icon.bunkasai::after { content: '茎'; }
 .link-item:hover .link-icon.bunkasai {
